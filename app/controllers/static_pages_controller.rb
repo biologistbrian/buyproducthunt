@@ -10,6 +10,7 @@ class StaticPagesController < ApplicationController
       "code": code,
       "grant_type": "authorization_code"
       })
-    @a =  JSON.parse(req.to_s)
+    rit = HTTP.auth('Bearer '+code).post('https://api.producthunt.com/v2/api/graphql', :json => { 'query':'{viewer(){user{id, name, username,isMaker,twitterUsername,coverImage}}}'})
+    @a = JSON.parse(rit.to_s)
   end
 end
