@@ -27,7 +27,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
       if @product.save
-        redirect_to 'https://api.producthunt.com/v2/oauth/authorize?client_id=zGwRsoqwyQsY2y9btTHA7mnWF0foKCxQID89LrLKeMY&redirect_uri=http://localhost:3000/booger&response_type=code&scope=public+private&bc=1'
+        redirect_to 'https://api.producthunt.com/v2/oauth/authorize?client_id=zGwRsoqwyQsY2y9btTHA7mnWF0foKCxQID89LrLKeMY&redirect_uri=https://buyproducthunt.herokuapp.com/booger&response_type=code&scope=public+private&bc=1'
       else
         render :new 
     end
