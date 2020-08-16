@@ -1,0 +1,62 @@
+<%= form_with(model: product, local: true) do |form| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :creator_id %>
+    <%= form.number_field :creator_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ph_id %>
+    <%= form.text_field :ph_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ph_url %>
+    <%= form.text_field :ph_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ph_topic %>
+    <%= form.text_field :ph_topic %>
+  </div>
+
+  <div class="field">
+    <%= form.label :topic_id %>
+    <%= form.number_field :topic_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ph_likes %>
+    <%= form.number_field :ph_likes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ph_comments %>
+    <%= form.number_field :ph_comments %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ph_launchdate %>
+    <%= form.date_select :ph_launchdate %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

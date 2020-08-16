@@ -1,0 +1,30 @@
+<br />
+
+<div class="row">
+<div class="col-12 col-md-8">
+<div class="row" style="padding-bottom: 10px">
+<div class="col">
+<h4 style="display: inline">Popular</h4>
+</div>
+<div class="col" style="display: inline;text-align: right">
+<h6 style="display: inline;text-align: right">Popular | Newest</h6></div></div>
+    <% @products.each do |product| %>
+<div class="booyah-box">
+<%= product.name %>
+        <%= product.creator_id %>
+        <%= product.ph_id %>
+        <%= product.ph_url %>
+        <%= product.ph_topic %>
+        <%= product.topic_id %>
+        <%= product.ph_likes %>
+        <%= product.ph_comments %>
+        <%= product.ph_launchdate %>
+        <%= link_to 'Show', product %>
+        <%= link_to 'Edit', edit_product_path(product) %>
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>          </div>
+
+    <% end %>
+
+
+</div></div>
+

@@ -1,0 +1,20 @@
+<center>
+<h5><b>List Your Product</b></h5>
+<div class="booyah-box col-10 col-md-6" style="text-align: left">
+<b><p>ProductHunt Link</p></b>
+<%= form_with(model: @product, local: true) do |form| %>
+
+
+  <div class="field">
+    <%= form.text_field :ph_url, placeholder: "ProductHunt URL (must include https://www.producthunt.com/posts/)", style: "width:100%", required: true, pattern: "https?://www.producthunt.com/posts/.+" %>
+  </div>
+    <div class="actions">
+    <%= form.submit "Submit", class: "btn btn-sm btn-sample" %>
+  </div>
+<% end %>
+
+
+
+</div>
+
+</center>

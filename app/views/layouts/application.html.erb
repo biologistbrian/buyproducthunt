@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buyph</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white !important;border-bottom: 1px solid #ebebeb !important;margin-bottom: 25px" ><div class="container">
+
+  <a class="navbar-brand" href="/">
+    <img src="../../assets/icon.png" height="45px" alt="woopitywoop">
+  </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div style="float:right !important">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation" style="float: right !important;">
+    <i class="fa fa-bars" style="color:white"></i>
+  </button>
+</div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <!-- <ul class="navbar-nav mr-auto"> -->
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0" style="text-align:right">
+   <%= link_to 'Buy', '#', class: 'nav-link ', style: "font-size:18px" %>
+   <%= link_to 'Sell', '#', class: 'nav-link ', style: "font-size:18px"  %>
+   <%= link_to 'About', '#', class: 'nav-link ', style: "font-size:18px"  %>
+
+   </ul>
+
+
+
+   </div>
+
+
+</nav>
+<div class="container">
+
+    <%= yield %>
+    </div>
+  </body>
+</html>

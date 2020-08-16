@@ -1,0 +1,24 @@
+<style>
+
+</style>
+
+<center>
+<div class="full-overlay">
+<div class="row align-items-center" style="height:100%">
+<div class="col-12" style="position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);">
+<h1 style="font-size:4em;">Buy and sell products<br />
+once featured on Product Hunt</h1><br />
+<%= button_to "Buy products!", {:controller => "products", :action => "index"} , :method=>:get, class: "btn btn-lg btn-sample" %>
+<br />
+<%= button_to "Sell products!", {:controller => "products", :action => "new"} , :method=>:get, class: "btn btn-lg btn-sample" %>
+<br />
+
+<%= link_to "Learn More", "#" %>
+
+</div>
+</div>
+</article></center>

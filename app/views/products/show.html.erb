@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @product.creator_id %>
+</p>
+
+<p>
+  <strong>Ph:</strong>
+  <%= @product.ph_id %>
+</p>
+
+<p>
+  <strong>Ph url:</strong>
+  <%= @product.ph_url %>
+</p>
+
+<p>
+  <strong>Ph topic:</strong>
+  <%= @product.ph_topic %>
+</p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @product.topic_id %>
+</p>
+
+<p>
+  <strong>Ph likes:</strong>
+  <%= @product.ph_likes %>
+</p>
+
+<p>
+  <strong>Ph comments:</strong>
+  <%= @product.ph_comments %>
+</p>
+
+<p>
+  <strong>Ph launchdate:</strong>
+  <%= @product.ph_launchdate %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
