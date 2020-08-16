@@ -10,6 +10,6 @@ class StaticPagesController < ApplicationController
       "code": code,
       "grant_type": "authorization_code"
       })
-    puts JSON.parse(req.to_s)
+    @a =  JSON.parse(req.to_s)
   end
 end
